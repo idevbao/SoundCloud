@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E519DC8020AA7F44008CB50E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519DC7F20AA7F44008CB50E /* AppDelegate.swift */; };
-		E519DC8220AA7F44008CB50E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519DC8120AA7F44008CB50E /* ViewController.swift */; };
-		E519DC8520AA7F44008CB50E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E519DC8320AA7F44008CB50E /* Main.storyboard */; };
 		E519DC8720AA7F45008CB50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E519DC8620AA7F45008CB50E /* Assets.xcassets */; };
 		E519DC8A20AA7F45008CB50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E519DC8820AA7F45008CB50E /* LaunchScreen.storyboard */; };
+		E519DC9420AA8F58008CB50E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519DC9220AA8F58008CB50E /* HomeViewController.swift */; };
+		E519DC9520AA8F58008CB50E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E519DC9320AA8F58008CB50E /* HomeViewController.xib */; };
+		E519DC9920AA9343008CB50E /* GenereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519DC9720AA9343008CB50E /* GenereViewController.swift */; };
+		E519DC9A20AA9343008CB50E /* GenereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E519DC9820AA9343008CB50E /* GenereViewController.xib */; };
+		E519DCA920AB0701008CB50E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519DCA820AB0701008CB50E /* HomeTableViewCell.swift */; };
+		E519DCAB20AB103D008CB50E /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519DCAA20AB103D008CB50E /* HomeCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E519DC7C20AA7F44008CB50E /* SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E519DC7F20AA7F44008CB50E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E519DC8120AA7F44008CB50E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E519DC8420AA7F44008CB50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E519DC8620AA7F45008CB50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E519DC8920AA7F45008CB50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E519DC8B20AA7F46008CB50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E519DC9220AA8F58008CB50E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E519DC9320AA8F58008CB50E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E519DC9720AA9343008CB50E /* GenereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenereViewController.swift; sourceTree = "<group>"; };
+		E519DC9820AA9343008CB50E /* GenereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenereViewController.xib; sourceTree = "<group>"; };
+		E519DCA820AB0701008CB50E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		E519DCAA20AB103D008CB50E /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		E519DC7E20AA7F44008CB50E /* SoundCloud */ = {
 			isa = PBXGroup;
 			children = (
-				E519DC7F20AA7F44008CB50E /* AppDelegate.swift */,
-				E519DC8120AA7F44008CB50E /* ViewController.swift */,
-				E519DC8320AA7F44008CB50E /* Main.storyboard */,
-				E519DC8620AA7F45008CB50E /* Assets.xcassets */,
-				E519DC8820AA7F45008CB50E /* LaunchScreen.storyboard */,
-				E519DC8B20AA7F46008CB50E /* Info.plist */,
+				E519DC9B20AA935D008CB50E /* Core */,
+				E519DC9620AA9222008CB50E /* Genres */,
+				E519DC9120AA8F32008CB50E /* ScreenHome */,
+				E519DC9C20AA9371008CB50E /* SuportFile */,
 			);
 			path = SoundCloud;
+			sourceTree = "<group>";
+		};
+		E519DC9120AA8F32008CB50E /* ScreenHome */ = {
+			isa = PBXGroup;
+			children = (
+				E519DC9D20AA9BF0008CB50E /* CellHome */,
+				E519DC9220AA8F58008CB50E /* HomeViewController.swift */,
+				E519DCA820AB0701008CB50E /* HomeTableViewCell.swift */,
+				E519DC9320AA8F58008CB50E /* HomeViewController.xib */,
+			);
+			path = ScreenHome;
+			sourceTree = "<group>";
+		};
+		E519DC9620AA9222008CB50E /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+				E519DC9720AA9343008CB50E /* GenereViewController.swift */,
+				E519DC9820AA9343008CB50E /* GenereViewController.xib */,
+			);
+			path = Genres;
+			sourceTree = "<group>";
+		};
+		E519DC9B20AA935D008CB50E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E519DC7F20AA7F44008CB50E /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E519DC9C20AA9371008CB50E /* SuportFile */ = {
+			isa = PBXGroup;
+			children = (
+				E519DC8B20AA7F46008CB50E /* Info.plist */,
+				E519DC8620AA7F45008CB50E /* Assets.xcassets */,
+				E519DC8820AA7F45008CB50E /* LaunchScreen.storyboard */,
+			);
+			path = SuportFile;
+			sourceTree = "<group>";
+		};
+		E519DC9D20AA9BF0008CB50E /* CellHome */ = {
+			isa = PBXGroup;
+			children = (
+				E519DCAA20AB103D008CB50E /* HomeCollectionView.swift */,
+			);
+			path = CellHome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +176,8 @@
 			files = (
 				E519DC8A20AA7F45008CB50E /* LaunchScreen.storyboard in Resources */,
 				E519DC8720AA7F45008CB50E /* Assets.xcassets in Resources */,
-				E519DC8520AA7F44008CB50E /* Main.storyboard in Resources */,
+				E519DC9A20AA9343008CB50E /* GenereViewController.xib in Resources */,
+				E519DC9520AA8F58008CB50E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E519DC8220AA7F44008CB50E /* ViewController.swift in Sources */,
+				E519DCA920AB0701008CB50E /* HomeTableViewCell.swift in Sources */,
 				E519DC8020AA7F44008CB50E /* AppDelegate.swift in Sources */,
+				E519DC9420AA8F58008CB50E /* HomeViewController.swift in Sources */,
+				E519DC9920AA9343008CB50E /* GenereViewController.swift in Sources */,
+				E519DCAB20AB103D008CB50E /* HomeCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E519DC8320AA7F44008CB50E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E519DC8420AA7F44008CB50E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E519DC8820AA7F45008CB50E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93L9L9RF27;
-				INFOPLIST_FILE = SoundCloud/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SoundCloud/SuportFile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93L9L9RF27;
-				INFOPLIST_FILE = SoundCloud/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SoundCloud/SuportFile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

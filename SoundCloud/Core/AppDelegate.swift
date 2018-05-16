@@ -10,12 +10,28 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window =  UIWindow.init(frame: UIScreen.main.bounds)
+        
+        let viewControllerHome = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let navigationHome = UINavigationController.init(rootViewController: viewControllerHome)
+        
+        let viewControllerGenre = GenereViewController(nibName: "GenereViewController", bundle: nil)
+        let navigationGenre = UINavigationController.init(rootViewController: viewControllerGenre)
+        
+        let tabBarController = UITabBarController.init()
+        tabBarController.viewControllers = [navigationHome,navigationGenre]
+        window?.rootViewController = tabBarController
+        
+       
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
 
