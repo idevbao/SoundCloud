@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell ,UICollectionViewDelegate,UICollectionViewDataSource{
     
     var collectionViewHome: HomeCollectionView!
     
@@ -31,6 +31,8 @@ class HomeTableViewCell: UITableViewCell {
         contentView.addSubview(self.collectionViewHome)
         
         layoutMargins = UIEdgeInsetsMake(10, 0, 10, 0)
+        collectionViewHome.dataSource = self
+        collectionViewHome.delegate = self  
    
     }
     required init?(coder aDecoder: NSCoder) {
@@ -40,11 +42,20 @@ class HomeTableViewCell: UITableViewCell {
     
     // MARK:  set delegate datasource cho HomeviewCtroller
     
-    func setCollectionViewDataSourceDelegate(dataSourceDelegate delegate: UICollectionViewDelegate & UICollectionViewDataSource, index: NSInteger) {
-        collectionViewHome.dataSource = delegate
-        collectionViewHome.delegate = delegate
-        
-        collectionViewHome.reloadData()
+//    func setCollectionViewDataSourceDelegate(dataSourceDelegate delegate: UICollectionViewDelegate & UICollectionViewDataSource, index: NSInteger) {
+//        collectionViewHome.dataSource = delegate
+//        collectionViewHome.delegate = delegate
+//
+//        collectionViewHome.reloadData()
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CCell", for: indexPath)
+        return cell
     }
 }
 

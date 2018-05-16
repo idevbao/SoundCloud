@@ -34,9 +34,9 @@ class HomeViewController: UIViewController {
     
     
 }
-extension HomeViewController: UITableViewDataSource,UITableViewDelegate, UICollectionViewDelegate,UICollectionViewDataSource{
+extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
     
-    
+    //UICollectionViewDelegate,UICollectionViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -55,21 +55,14 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate, UIColle
         return (self.view.frame.size.height - (heighttabBarItem! + heightNavigation!))/3
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let collectionCell  = cell as! HomeTableViewCell
-        
-        collectionCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, index: (indexPath as NSIndexPath).row)
-        
-        // MARK: - UICollectionViewDelegate. UICollectionViewDataSource
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let collectionCell  = cell as! HomeTableViewCell
+//        
+//        collectionCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, index: (indexPath as NSIndexPath).row)
+//        
+//        // MARK: - UICollectionViewDelegate. UICollectionViewDataSource
+//    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CCell", for: indexPath)
-        return cell
-    }
     
     
 }
