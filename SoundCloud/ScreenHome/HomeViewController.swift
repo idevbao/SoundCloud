@@ -46,6 +46,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
         if cell == nil {
             cell =  HomeTableViewCell.init()
         }
+        cell?.textLabel?.text = "1"
         return cell!
     }
     
