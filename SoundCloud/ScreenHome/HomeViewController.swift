@@ -56,13 +56,6 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
         return (self.view.frame.size.height - (heighttabBarItem! + heightNavigation!))/3
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        let collectionCell  = cell as! HomeTableViewCell
-//        
-//        collectionCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, index: (indexPath as NSIndexPath).row)
-//        
-//        // MARK: - UICollectionViewDelegate. UICollectionViewDataSource
-//    }
     
     
     

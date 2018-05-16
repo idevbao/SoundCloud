@@ -38,16 +38,7 @@ class HomeTableViewCell: UITableViewCell ,UICollectionViewDelegate,UICollectionV
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    // MARK:  set delegate datasource cho HomeviewCtroller
-    
-//    func setCollectionViewDataSourceDelegate(dataSourceDelegate delegate: UICollectionViewDelegate & UICollectionViewDataSource, index: NSInteger) {
-//        collectionViewHome.dataSource = delegate
-//        collectionViewHome.delegate = delegate
-//
-//        collectionViewHome.reloadData()
-//    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
